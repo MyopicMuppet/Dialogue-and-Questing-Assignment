@@ -1,35 +1,25 @@
-﻿[System.Serializable]
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class QuestGoal
+[System.Serializable]
+public class QuestGoal 
 {
-    //goal type
     public GoalType goalType;
-    //required amount
+
     public int requiredAmount;
-    //currentAmount
     public int currentAmount;
-    //isReached
-    public bool isReached()
+
+    public bool IsReached()
     {
         return (currentAmount >= requiredAmount);
     }
-    //EnemyKilled
-    public void EnemyKilled()
+
+    public void RingGained()
     {
-        if(goalType == GoalType.Kill)
-        {
+        if (goalType == GoalType.Gather)
             currentAmount++;
-        }
     }
-    //ObjectCollected
-    public void ObjectCollected()
-    {
-        if(goalType == GoalType.Gather)
-        {
-            currentAmount++;
-        }
-    }
-	
 }
 
 public enum GoalType

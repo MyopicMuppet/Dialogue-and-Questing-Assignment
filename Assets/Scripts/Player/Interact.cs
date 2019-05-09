@@ -6,6 +6,7 @@ public class Interact : MonoBehaviour
 {
     #region Variables
     public GameObject questGiverCanvas;
+    public GameObject ringBearerCanvas;
 
 
     #endregion
@@ -37,6 +38,7 @@ public class Interact : MonoBehaviour
                 //and that hits info is tagged NPC
                 if (hitInfo.collider.CompareTag("QuestGiver"))
                 {
+
                     questGiverCanvas.SetActive(true);
                     //Dialogue dlg = hitInfo.transform.GetComponent<Dialogue>();
                     if (questGiverCanvas != null)
@@ -52,19 +54,38 @@ public class Interact : MonoBehaviour
                         Debug.Log("QuestGiver");
                 }
 
-                
-                
-                
+
+                if (hitInfo.collider.CompareTag("RingBearer"))
+                {
+                    ringBearerCanvas.SetActive(true);
+                    //Dialogue dlg = hitInfo.transform.GetComponent<Dialogue>();
+                    if (ringBearerCanvas != null)
+                    {
+                        //dlg.showDlg = true;
+                        Movement.canMove = false;
+                        Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
+                    }
+
+
+                    //Debug that we hit a NPC
+                    Debug.Log("QuestGiver");
+                }
+
+
+
+
+
 
                 #endregion
                 #region Item
                 //and that hits info is tagged Item
-                if (hitInfo.collider.CompareTag("Item"))
+               /* if (hitInfo.collider.CompareTag("Item"))
                 {
 
                     //Debug that we hit an Item
                     Debug.Log("item");
-                }
+                }*/
 
 
 
