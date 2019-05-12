@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Quest
 {
-    public bool isAsctive;
+    public bool isActive;
 
     public string title;
     public string description;
@@ -16,7 +16,7 @@ public class Quest
 
     public void Complete()
     {
-        isAsctive = false;
+        isActive = false;
         Debug.Log(title + "was completed");
     }
 

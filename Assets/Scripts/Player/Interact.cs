@@ -8,6 +8,8 @@ public class Interact : MonoBehaviour
     public GameObject questGiverCanvas;
     public GameObject ringBearerCanvas;
 
+   
+
 
     #endregion
     #region Start
@@ -37,6 +39,7 @@ public class Interact : MonoBehaviour
                 #region NPC tag
                 //and that hits info is tagged NPC
 
+               
                 if (hitInfo.collider.CompareTag("QuestGiver"))
                 {
 

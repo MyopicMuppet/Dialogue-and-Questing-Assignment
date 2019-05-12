@@ -31,7 +31,7 @@ public class QuestGiver : MonoBehaviour
     public void AcceptQuest()
     {
         questWindow.SetActive(false);
-        quest.isAsctive = true;
+        quest.isActive = true;
         player.quest = quest;
     }
 }

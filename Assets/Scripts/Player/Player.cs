@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     //collects quest item and checks if the required amound is reached, if it is it adds the quest rewards
     public void ItemCollect()
     {
-        if (quest.isAsctive)
+        if (quest.isActive)
         {
             quest.goal.ItemGained();
             if (quest.goal.IsReached())
