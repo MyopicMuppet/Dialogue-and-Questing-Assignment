@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
-    [Header ("Players Stats"]
+    [Header ("Player Stats")]
     public int experience = 40;
     public int gold = 10;
 
