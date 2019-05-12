@@ -17,7 +17,7 @@ public class Interact : MonoBehaviour
     #region Update
     private void Update()
     {
-      
+
 
         //if our interact key is pressed
         if (Input.GetButtonDown("Interact"))
@@ -36,22 +36,23 @@ public class Interact : MonoBehaviour
 
                 #region NPC tag
                 //and that hits info is tagged NPC
+
                 if (hitInfo.collider.CompareTag("QuestGiver"))
                 {
 
                     questGiverCanvas.SetActive(true);
                     //Dialogue dlg = hitInfo.transform.GetComponent<Dialogue>();
                     if (questGiverCanvas != null)
-                     {
+                    {
                         //dlg.showDlg = true;
                         Movement.canMove = false;
                         Cursor.lockState = CursorLockMode.None;
                         Cursor.visible = true;
-                    } 
+                    }
 
-                   
-                        //Debug that we hit a NPC
-                        Debug.Log("QuestGiver");
+
+                    //Debug that we hit a NPC
+                    Debug.Log("QuestGiver");
                 }
 
 
@@ -80,12 +81,12 @@ public class Interact : MonoBehaviour
                 #endregion
                 #region Item
                 //and that hits info is tagged Item
-               /* if (hitInfo.collider.CompareTag("Item"))
-                {
+                /* if (hitInfo.collider.CompareTag("Item"))
+                 {
 
-                    //Debug that we hit an Item
-                    Debug.Log("item");
-                }*/
+                     //Debug that we hit an Item
+                     Debug.Log("item");
+                 }*/
 
 
 
@@ -96,7 +97,7 @@ public class Interact : MonoBehaviour
         }
     }
 
-   public void EndDialogue()
+    public void EndDialogue()
     {
         //index = 0;
         //showDlg = false;

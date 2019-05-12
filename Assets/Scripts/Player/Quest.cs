@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Quests
+public class Quest
 {
-    public bool isActive;
+    public bool isAsctive;
 
     public string title;
     public string description;
@@ -16,7 +16,9 @@ public class Quests
 
     public void Complete()
     {
-        isActive = false;
-        Debug.Log(title + " was completed!");
+        isAsctive = false;
+        Debug.Log(title + "was completed");
     }
+
 }
+

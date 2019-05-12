@@ -15,15 +15,16 @@ public class QuestGoal
         return (currentAmount >= requiredAmount);
     }
 
-    public void RingGained()
+    //adds quest item
+    public void ItemGained()
     {
-        if (goalType == GoalType.Gather)
-            currentAmount++;
+        if (goalType == GoalType.Gathering)
+        currentAmount++;
     }
 }
 
 public enum GoalType
 {
     Kill,
-    Gather
+    Gathering
 }
