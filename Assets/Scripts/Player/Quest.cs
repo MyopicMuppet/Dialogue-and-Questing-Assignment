@@ -13,6 +13,7 @@ public class Quest
     public int goldReward;
 
     public QuestGoal goal;
+    public QuestGoal questStatus;
 
     public void Complete()
     {
@@ -21,4 +22,6 @@ public class Quest
     }
 
 }
+
+
 

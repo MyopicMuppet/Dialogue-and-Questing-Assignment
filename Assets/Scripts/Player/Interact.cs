@@ -8,6 +8,8 @@ public class Interact : MonoBehaviour
     public GameObject questGiverCanvas;
     public GameObject ringBearerCanvas;
 
+    public Quest quest;
+
    
 
 
@@ -39,7 +41,9 @@ public class Interact : MonoBehaviour
                 #region NPC tag
                 //and that hits info is tagged NPC
 
-               
+               if (quest.isActive == false) {
+
+                
                 if (hitInfo.collider.CompareTag("QuestGiver"))
                 {
 
@@ -57,8 +61,12 @@ public class Interact : MonoBehaviour
                     //Debug that we hit a NPC
                     Debug.Log("QuestGiver");
                 }
+                }
 
+               if (quest.isActive == true)
+                {
 
+                
                 if (hitInfo.collider.CompareTag("RingBearer"))
                 {
                     ringBearerCanvas.SetActive(true);
@@ -74,6 +82,7 @@ public class Interact : MonoBehaviour
 
                     //Debug that we hit a NPC
                     Debug.Log("QuestGiver");
+                }
                 }
 
 

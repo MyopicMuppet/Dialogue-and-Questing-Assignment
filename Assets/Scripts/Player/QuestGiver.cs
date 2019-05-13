@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class QuestGiver : MonoBehaviour
 {
     public Quest quest;
+    public QuestGoal questStatus;
 
     public Player player;
+
+    public Interact interact;
 
     public GameObject questGiverWindow;
     public GameObject questWindow;
@@ -33,5 +36,8 @@ public class QuestGiver : MonoBehaviour
         questWindow.SetActive(false);
         quest.isActive = true;
         player.quest = quest;
+        interact.quest = quest;
+        
+        
     }
 }

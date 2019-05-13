@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class QuestGoal 
+public class QuestGoal
 {
     public GoalType goalType;
+    public QuestStatus questStatus;
 
     public int requiredAmount;
     public int currentAmount;
@@ -17,14 +18,27 @@ public class QuestGoal
 
     //adds quest item
     public void ItemGained()
+
     {
-        if (goalType == GoalType.Gathering)
-        currentAmount++;
+        if (questStatus == QuestStatus.Active)
+        {
+            if (goalType == GoalType.Gathering)
+                currentAmount++;
+        }
     }
 }
+
 
 public enum GoalType
 {
     Kill,
     Gathering
+}
+
+public enum QuestStatus
+{
+    Available,
+    Active,
+    Completed,
+    Failed
 }
